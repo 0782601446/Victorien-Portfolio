@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Victorien Portfolio</title>
+<style>
+  /* Reset and base */
+  * {
+    margin: 0; padding: 0; box-sizing: border-box;
+  }
+  body, html {
+    height: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+  }
+
+  /* Background image covering full viewport */
+  body {
+    background: url('Image/victorien-passport.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  /* Overlay to darken background for readability */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 0;
+  }
+
+  /* Navigation */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    padding: 1rem 0;
+    z-index: 10;
+  }
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  nav ul li a:hover,
+  nav ul li a.active {
+    background: #4CAF50;
+    color: #000;
+  }
+
+  /* Container for content below nav */
+  .content {
+    position: relative;
+    top: 70px;
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 0 10px #000;
+    min-height: 60vh;
+  }
+
+  /* Sections hidden by default */
+  section {
+    display: none;
+    animation: fadeIn 0.8s ease forwards;
+  }
+
+  /* Show active section */
+  section.active {
+    display: block;
+  }
+
+  /* Headings */
+  h1, h2 {
+    margin-bottom: 1rem;
+    color: #4CAF50;
+  }
+
+  /* Paragraphs */
+  p {
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
+
+  /* Fade in animation */
+  @keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  /* Responsive */
+  @media(max-width: 600px) {
+    nav ul {
+      gap: 1rem;
+    }
+    .content {
+      margin: 1rem;
+      padding: 1rem;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <ul>
+    <li><a href="#" class="nav-link active" data-target="home">Home</a></li>
+    <li><a href="#" class="nav-link" data-target="about">About Me</a></li>
+    <li><a href="#" class="nav-link" data-target="projects">Projects</a></li>
+    <li><a href="#" class="nav-link" data-target="contact">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="content">
+  <!-- Home Section -->
+  <section id="home" class="active">
+    <h1>Victorien's Portfolio</h1>
+    <p>Bridging Agriculture and Technology through AI, IoT, and Machine Learning.</p>
+  </section>
+
+  <!-- About Me Section -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      With 4 years of academic grounding in Agricultural Engineering (Bachelor’s with Honors) and more than 2 years of hands-on experience in Artificial Intelligence (AI), Machine Learning (ML), and Internet of Things (IoT), I’m deeply engaged in bridging the gap between agriculture and cutting-edge technology.
+    </p>
+    <p>
+      Currently, I’m delivering training sessions to university students at the University of Rwanda – Musanze Busogo campus, under the INESAM Academy. I focus on equipping students with practical and industry-relevant knowledge in AI, ML, and IoT, especially as applied in the agricultural sector. Seeing how these emerging technologies can empower young minds to think innovatively and solve real-world problems is one of the most rewarding parts of my journey.
+    </p>
+    <p>
+      Beyond teaching, I’ve been actively involved in developing and implementing AI and IoT solutions tailored to agricultural needs ranging from precision farming to smart irrigation and real-time crop monitoring. These experiences have sharpened my skills in project planning, team collaboration, and tech deployment in real-world agricultural environments.
+    </p>
+    <p>
+      With a strong foundation in agricultural engineering and a deep passion for tech-driven innovation, I’m well-positioned to lead and contribute to projects that aim to transform agriculture and related fields. Whether it’s through research, development, or capacity building, I believe in using technology as a tool for positive impact especially in communities where innovation can be a game-changer.
+    </p>
+    <p>
+      I’m always open to new collaborations, knowledge-sharing, and opportunities to contribute to meaningful projects. If you're working at the intersection of agriculture and technology, or if you're passionate about digital transformation and sustainability, let’s connect and build something impactful together!
+    </p>
+    <p><strong>#AI #IoT #MachineLearning #Agritech #SmartFarming #DigitalTransformation #AgriculturalEngineering #TechForGood #Education #Mentorship #Innovation #Sustainability #UniversityOfRwanda #INESAMAcademy</strong></p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>
+      Received the Global People Award UK (United Kingdom) under the Efficiency for Access design challenge, supported by the Energy Saving Trust and Engineers Without Borders UK, as part of the Project Research Competition 2024–2025. Following this success, I co-founded and now serve as the Chief Executive Officer (CEO) of INESAM Company Ltd, established after winning the International Multi Disciplinary Competition 2024–2025. The company focuses on innovative solutions in Agriculture and technology.
+    </p>
+    <p>
+      Additionally, I founded INESAM Academy at Busogo Campus to provide practical training in Artificial Intelligence (AI), Machine Learning (ML), and Internet of Things (IoT) technologies, aiming to bridge the gap between academic theory and industry practice and to prepare students for the evolving job market. Fortunately, 15 trained in INESAM Academy won grant from MasterCard.
+    </p>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> ukurikiyimfuravictorien72@gmail.com</p>
+    <p><strong>Phone number:</strong> +250 782 601 446</p>
+    <p><strong>Location:</strong> Rwanda, Kigali, Nyagatare</p>
+  </section>
+</div>
+
+<script>
+  // Navigation links toggling content
+  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll('section');
+
+  navLinks.forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const targetId = link.getAttribute('data-target');
+
+      // Remove active class from all links
+      navLinks.forEach(l => l.classList.remove('active'));
+      // Add active class to clicked link
+      link.classList.add('active');
+
+      // Hide all sections
+      sections.forEach(section => {
+        section.classList.remove('active');
+      });
+      // Show target section
+      const targetSection = document.getElementById(targetId);
+      if(targetSection) targetSection.classList.add('active');
+    });
+  });
+</script>
+
+</body>
+</html>
